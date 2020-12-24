@@ -16,7 +16,7 @@ class SudokuValidatorTest(unittest.TestCase):
             [".",".",".",".","8",".",".","7","9"]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertTrue(result)
+        self.assertEqual(result, True)
         
     def test_invalid_line(self):
         board = [
@@ -31,7 +31,7 @@ class SudokuValidatorTest(unittest.TestCase):
             [".",".",".",".",".",".",".",".","."]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertFalse(result)
+        self.assertEqual(result, False)
         
     def test_invalid_column(self):
         board = [
@@ -46,7 +46,7 @@ class SudokuValidatorTest(unittest.TestCase):
             [".",".",".",".","2",".",".",".","."]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertFalse(result)
+        self.assertEqual(result, False)
         
     def test_invalid_box(self):
         board = [
@@ -61,5 +61,5 @@ class SudokuValidatorTest(unittest.TestCase):
             [".",".",".",".",".",".",".",".","."]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertFalse(result)
+        self.assertEqual(result, False)
 

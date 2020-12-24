@@ -17,7 +17,7 @@ class VerifyCalculatorTest(unittest.TestCase):
             ["4","1","2","8","7","6","9","3","5"]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertTrue(result)
+        self.assertEqual(result, True)
 
     def test_valid_blank_board(self):
         board = [
@@ -32,7 +32,7 @@ class VerifyCalculatorTest(unittest.TestCase):
             [".",".",".",".",".",".",".",".","."]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertTrue(result)
+        self.assertEqual(result, True)
 
     def test_invalid_full_board(self):
         board = [
@@ -47,4 +47,4 @@ class VerifyCalculatorTest(unittest.TestCase):
             ["4","1","2","8","7","6","9","3","5"]
         ]
         result = SudokuValidator().isValidSudoku(board)
-        self.assertFalse(result)
+        self.assertEqual(result, False)
